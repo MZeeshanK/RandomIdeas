@@ -1,5 +1,4 @@
 const express = require('express');
-const ideas = require('../ideas');
 const Idea = require('../model/Idea');
 const router = express.Router();
 

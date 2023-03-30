@@ -3,19 +3,19 @@ const mongoose = require('mongoose');
 const IdeaSchema = new mongoose.Schema({
   text: {
     type: String,
-    required: true,
+    required: [true, 'Please add a text field'],
   },
   tag: {
     type: String,
-    required: true,
+    required: [true, 'Please add a tag field'],
   },
   username: {
     type: String,
-    required: true,
+    required: [true, 'Please add the username field'],
   },
   Date: {
     type: Date,
-    default: new Date().toISOString().slice(0, 10),
+    default: Date.now,
   },
 });
 
